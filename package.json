@@ -1,0 +1,29 @@
+{
+  "name": "jquery.jqmts",
+  "title": "jQuery Mobile Tiny Sort",
+  "description": "A jQuery Mobile implemention of TinySort",
+  "version": "0.1.0",
+  "homepage": "https://github.com/commadelimited/jquery.jqmts.js",
+  "author": {
+    "name": "andy matthews",
+    "email": "andy@commadelimited.com",
+    "url": "http://andyMatthews.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/commadelimited/jquery.jqmts.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/commadelimited/jquery.jqmts.js/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/commadelimited/jquery.jqmts.js/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "1.7.2"
+  },
+  "keywords": []
+}
