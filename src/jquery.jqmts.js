@@ -108,5 +108,4 @@
 			return methods.init.apply(this, arguments);
 		}
 	};
-
 })(jQuery, window);
