@@ -17,8 +17,8 @@
 				<div data-role="navbar">
 					<ul>
 						<a href="index.html" data-ajax="false">Home</a>
-						<a href="simple.html" class="ui-btn-active" data-ajax="false">Simple</a>
-						<a href="pretty.html" data-ajax="false">Pretty</a>
+						<a href="simple.html" data-ajax="false">Simple</a>
+						<a href="pretty.html" class="ui-btn-active" data-ajax="false">Pretty</a>
 						<a href="long.html" data-ajax="false">Long</a>
 					</ul>
 				</div>
@@ -27,7 +27,7 @@
 
 				<a href="https://github.com/commadelimited/jquery.jqmts.js" data-role="button" data-icon="star">Get the code</a>
 
-				<h2>Simple Lists</h2>
+				<h2>Pretty Menu</h2>
 
 				<ul data-role="listview" data-inset="true" id="sortlist">
 					<li data-sort-firstname="alana" data-sort-lastname="Midgley">Alana Midgley</li>
@@ -50,7 +50,7 @@
 		<script>
 			$(function(){
 				$('#sortlist').jqmts({
-					useNativeMenu: true,
+					useNativeMenu: false,
 					showCounts: true,
 					attributes: {firstname: 'First Name', lastname: 'Last Name'}
 				});

@@ -18,9 +18,12 @@
 		// build out the select menu
 		var $select = 	$('<li></li>').addClass('jqmts')
 						.prepend(
-							$('<select></select>').attr(
+							$('<select></select>')
+							.attr(
 								{'id': $el.attr('id') + '-sort'}
-							).html(function(){
+							)
+							.data('native-menu',options.useNativeMenu)
+							.html(function(){
 								var str = [];
 								for (var o in options.attributes) {
 									str.push('<option value="' + o + '">' + options.attributes[o] + '</option>');

@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>jQuery Mobile Tiny Sort</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script src="src/jquery.tinysort.min.js"></script>
+		<script src="src/jquery.jqmts.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header" data-position="inline">
+				<h1>jQuery Mobile Tiny Sort</h1>
+				<div data-role="navbar">
+					<ul>
+						<a href="index.html" data-ajax="false">Home</a>
+						<a href="simple.html" data-ajax="false">Simple</a>
+						<a href="pretty.html" data-ajax="false">Pretty</a>
+						<a href="long.html" class="ui-btn-active">Long</a>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+
+				<a href="https://github.com/commadelimited/jquery.jqmts.js" data-role="button" data-icon="star">Get the code</a>
+
+				<h2>Long Lists</h2>
+
+				<ul data-role="listview" data-inset="true" id="sortlist">
+					<li data-sort-firstname="Darren" data-sort-lastname="Gathright">Darren Gathright</li>
+					<li data-sort-firstname="Max" data-sort-lastname="Marcinek">Max Marcinek</li>
+					<li data-sort-firstname="Cody" data-sort-lastname="Demelo">Cody Demelo</li>
+					<li data-sort-firstname="Earnestine" data-sort-lastname="Vannatta">Earnestine Vannatta</li>
+					<li data-sort-firstname="Clinton" data-sort-lastname="Ramsden">Clinton Ramsden</li>
+					<li data-sort-firstname="Amie" data-sort-lastname="Litt">Amie Litt</li>
+					<li data-sort-firstname="Neil" data-sort-lastname="Foti">Neil Foti</li>
+					<li data-sort-firstname="Erik" data-sort-lastname="Dantonio">Erik Dantonio</li>
+					<li data-sort-firstname="Tabatha" data-sort-lastname="Steinberger">Tabatha Steinberger</li>
+					<li data-sort-firstname="Kenya" data-sort-lastname="Margolin">Kenya Margolin</li>
+					<li data-sort-firstname="Dollie" data-sort-lastname="Tee">Dollie Tee</li>
+					<li data-sort-firstname="Lonnie" data-sort-lastname="Rada">Lonnie Rada</li>
+					<li data-sort-firstname="Clinton" data-sort-lastname="Sidwell">Clinton Sidwell</li>
+					<li data-sort-firstname="Javier" data-sort-lastname="Klemme">Javier Klemme</li>
+					<li data-sort-firstname="Tameka" data-sort-lastname="Cothron">Tameka Cothron</li>
+					<li data-sort-firstname="Jamie" data-sort-lastname="Satterthwaite">Jamie Satterthwaite</li>
+					<li data-sort-firstname="Mathew" data-sort-lastname="Lafontant">Mathew Lafontant</li>
+					<li data-sort-firstname="Allan" data-sort-lastname="Sanon">Allan Sanon</li>
+					<li data-sort-firstname="Allan" data-sort-lastname="Skowron">Allan Skowron</li>
+					<li data-sort-firstname="Liza" data-sort-lastname="Sward">Liza Sward</li>
+					<li data-sort-firstname="Fernando" data-sort-lastname="Eisenhower">Fernando Eisenhower</li>
+					<li data-sort-firstname="Nita" data-sort-lastname="Mckie">Nita Mckie</li>
+					<li data-sort-firstname="Fernando" data-sort-lastname="Ingles">Fernando Ingles</li>
+					<li data-sort-firstname="Clare" data-sort-lastname="Trabue">Clare Trabue</li>
+					<li data-sort-firstname="Mathew" data-sort-lastname="Romines">Mathew Romines</li>
+					<li data-sort-firstname="Neil" data-sort-lastname="Rothrock">Neil Rothrock</li>
+					<li data-sort-firstname="Sofia" data-sort-lastname="Badon">Sofia Badon</li>
+					<li data-sort-firstname="Kurt" data-sort-lastname="Czarnecki">Kurt Czarnecki</li>
+					<li data-sort-firstname="Ted" data-sort-lastname="Weinman">Ted Weinman</li>
+					<li data-sort-firstname="Ted" data-sort-lastname="Merrit">Ted Merrit</li>
+					<li data-sort-firstname="Karina" data-sort-lastname="Alam">Karina Alam</li>
+					<li data-sort-firstname="Chandra" data-sort-lastname="Pryce">Chandra Pryce</li>
+					<li data-sort-firstname="Javier" data-sort-lastname="Wanner">Javier Wanner</li>
+					<li data-sort-firstname="Lenore" data-sort-lastname="Steitz">Lenore Steitz</li>
+					<li data-sort-firstname="Jeanie" data-sort-lastname="Godbee">Jeanie Godbee</li>
+					<li data-sort-firstname="Neil" data-sort-lastname="Giuffre">Neil Giuffre</li>
+					<li data-sort-firstname="Cody" data-sort-lastname="Hosch">Cody Hosch</li>
+					<li data-sort-firstname="Guy" data-sort-lastname="Chacko">Guy Chacko</li>
+					<li data-sort-firstname="Ted" data-sort-lastname="Ebling">Ted Ebling</li>
+					<li data-sort-firstname="Neil" data-sort-lastname="Rollings">Neil Rollings</li>
+					<li data-sort-firstname="Amie" data-sort-lastname="Dries">Amie Dries</li>
+					<li data-sort-firstname="Lonnie" data-sort-lastname="Gerth">Lonnie Gerth</li>
+					<li data-sort-firstname="Hillary" data-sort-lastname="Dewald">Hillary Dewald</li>
+					<li data-sort-firstname="Kurt" data-sort-lastname="Caves">Kurt Caves</li>
+					<li data-sort-firstname="Kurt" data-sort-lastname="Cowie">Kurt Cowie</li>
+					<li data-sort-firstname="Cody" data-sort-lastname="Verhey">Cody Verhey</li>
+					<li data-sort-firstname="Noreen" data-sort-lastname="Foisy">Noreen Foisy</li>
+					<li data-sort-firstname="Chandra" data-sort-lastname="Below">Chandra Below</li>
+					<li data-sort-firstname="Hugh" data-sort-lastname="Sutera">Hugh Sutera</li>
+					<li data-sort-firstname="Kurt" data-sort-lastname="Pebley">Kurt Pebley</li>
+					<li data-sort-firstname="Earnestine" data-sort-lastname="Villalva">Earnestine Villalva</li>
+					<li data-sort-firstname="Harriett" data-sort-lastname="Peralez">Harriett Peralez</li>
+					<li data-sort-firstname="Max" data-sort-lastname="Douville">Max Douville</li>
+					<li data-sort-firstname="Guy" data-sort-lastname="Gaumer">Guy Gaumer</li>
+					<li data-sort-firstname="Nannie" data-sort-lastname="Whalley">Nannie Whalley</li>
+					<li data-sort-firstname="Tyrone" data-sort-lastname="Kyker">Tyrone Kyker</li>
+					<li data-sort-firstname="Clayton" data-sort-lastname="Aigner">Clayton Aigner</li>
+					<li data-sort-firstname="Emilia" data-sort-lastname="Kolodziej">Emilia Kolodziej</li>
+					<li data-sort-firstname="Darren" data-sort-lastname="Chadbourne">Darren Chadbourne</li>
+					<li data-sort-firstname="Dona" data-sort-lastname="Disbrow">Dona Disbrow</li>
+					<li data-sort-firstname="Jerri" data-sort-lastname="Rubinstein">Jerri Rubinstein</li>
+					<li data-sort-firstname="Darcy" data-sort-lastname="Basaldua">Darcy Basaldua</li>
+					<li data-sort-firstname="Max" data-sort-lastname="Holquin">Max Holquin</li>
+					<li data-sort-firstname="Clare" data-sort-lastname="Lecroy">Clare Lecroy</li>
+					<li data-sort-firstname="Elnora" data-sort-lastname="Hauk">Elnora Hauk</li>
+					<li data-sort-firstname="Julio" data-sort-lastname="Gilchrest">Julio Gilchrest</li>
+					<li data-sort-firstname="Selena" data-sort-lastname="Mirando">Selena Mirando</li>
+					<li data-sort-firstname="Odessa" data-sort-lastname="Jacquemin">Odessa Jacquemin</li>
+					<li data-sort-firstname="Christian" data-sort-lastname="Cranfill">Christian Cranfill</li>
+					<li data-sort-firstname="Julio" data-sort-lastname="Dacus">Julio Dacus</li>
+					<li data-sort-firstname="Julio" data-sort-lastname="Schnur">Julio Schnur</li>
+					<li data-sort-firstname="Kurt" data-sort-lastname="Grivas">Kurt Grivas</li>
+					<li data-sort-firstname="Fernando" data-sort-lastname="Lynes">Fernando Lynes</li>
+					<li data-sort-firstname="Clare" data-sort-lastname="Gandhi">Clare Gandhi</li>
+					<li data-sort-firstname="Lonnie" data-sort-lastname="Rames">Lonnie Rames</li>
+					<li data-sort-firstname="Lenore" data-sort-lastname="Lantigua">Lenore Lantigua</li>
+					<li data-sort-firstname="Clayton" data-sort-lastname="Harnish">Clayton Harnish</li>
+					<li data-sort-firstname="Neva" data-sort-lastname="Kendricks">Neva Kendricks</li>
+					<li data-sort-firstname="Esmeralda" data-sort-lastname="Surace">Esmeralda Surace</li>
+					<li data-sort-firstname="Avis" data-sort-lastname="Lanford">Avis Lanford</li>
+					<li data-sort-firstname="Karina" data-sort-lastname="Vallone">Karina Vallone</li>
+					<li data-sort-firstname="Erik" data-sort-lastname="Argento">Erik Argento</li>
+					<li data-sort-firstname="Lance" data-sort-lastname="Mulford">Lance Mulford</li>
+					<li data-sort-firstname="Alejandra" data-sort-lastname="Bensen">Alejandra Bensen</li>
+					<li data-sort-firstname="Clinton" data-sort-lastname="Keever">Clinton Keever</li>
+					<li data-sort-firstname="Jamie" data-sort-lastname="Prete">Jamie Prete</li>
+					<li data-sort-firstname="Darcy" data-sort-lastname="Helland">Darcy Helland</li>
+					<li data-sort-firstname="Javier" data-sort-lastname="Sabala">Javier Sabala</li>
+					<li data-sort-firstname="Guy" data-sort-lastname="Murrin">Guy Murrin</li>
+					<li data-sort-firstname="Noreen" data-sort-lastname="Alvardo">Noreen Alvardo</li>
+					<li data-sort-firstname="Lance" data-sort-lastname="Neifert">Lance Neifert</li>
+					<li data-sort-firstname="Neil" data-sort-lastname="Silvis">Neil Silvis</li>
+					<li data-sort-firstname="Allyson" data-sort-lastname="Roux">Allyson Roux</li>
+					<li data-sort-firstname="Nelson" data-sort-lastname="Kingsberry">Nelson Kingsberry</li>
+					<li data-sort-firstname="Darren" data-sort-lastname="Grahn">Darren Grahn</li>
+					<li data-sort-firstname="Lenore" data-sort-lastname="Grosvenor">Lenore Grosvenor</li>
+					<li data-sort-firstname="Erik" data-sort-lastname="Leard">Erik Leard</li>
+					<li data-sort-firstname="Penelope" data-sort-lastname="Osbourne">Penelope Osbourne</li>
+					<li data-sort-firstname="Loraine" data-sort-lastname="Morillo">Loraine Morillo</li>
+					<li data-sort-firstname="Clayton" data-sort-lastname="Shambo">Clayton Shambo</li>
+					<li data-sort-firstname="Ashlee" data-sort-lastname="Petre">Ashlee Petre</li>
+					<li data-sort-firstname="Kurt" data-sort-lastname="Pruneda">Kurt Pruneda</li>
+					<li data-sort-firstname="Cody" data-sort-lastname="Lebouef">Cody Lebouef</li>
+					<li data-sort-firstname="Allan" data-sort-lastname="Sytsma">Allan Sytsma</li>
+					<li data-sort-firstname="Harriett" data-sort-lastname="Kubota">Harriett Kubota</li>
+					<li data-sort-firstname="Guy" data-sort-lastname="Schrick">Guy Schrick</li>
+					<li data-sort-firstname="Katy" data-sort-lastname="Earnshaw">Katy Earnshaw</li>
+					<li data-sort-firstname="Nelson" data-sort-lastname="Demeo">Nelson Demeo</li>
+					<li data-sort-firstname="Kelly" data-sort-lastname="Hollmann">Kelly Hollmann</li>
+					<li data-sort-firstname="Lance" data-sort-lastname="Deforge">Lance Deforge</li>
+					<li data-sort-firstname="Cody" data-sort-lastname="Bohanon">Cody Bohanon</li>
+					<li data-sort-firstname="Kelly" data-sort-lastname="Leyendecker">Kelly Leyendecker</li>
+					<li data-sort-firstname="Hillary" data-sort-lastname="Bradwell">Hillary Bradwell</li>
+					<li data-sort-firstname="Lonnie" data-sort-lastname="Avis">Lonnie Avis</li>
+					<li data-sort-firstname="Louisa" data-sort-lastname="Bennefield">Louisa Bennefield</li>
+					<li data-sort-firstname="Rae" data-sort-lastname="Voliva">Rae Voliva</li>
+					<li data-sort-firstname="Alejandra" data-sort-lastname="Willhite">Alejandra Willhite</li>
+					<li data-sort-firstname="Jessie" data-sort-lastname="Fetters">Jessie Fetters</li>
+					<li data-sort-firstname="Ted" data-sort-lastname="Blas">Ted Blas</li>
+				</ul>
+
+			</div>
+		</div>
+	
+		<script>
+			$(function(){
+				$('#sortlist').jqmts({
+					useNativeMenu: true,
+					showCounts: true,
+					attributes: {firstname: 'First Name', lastname: 'Last Name'}
+				});
+			});
+		</script>
+
+	</body>
+</html>
