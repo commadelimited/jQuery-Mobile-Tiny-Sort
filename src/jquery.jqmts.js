@@ -11,7 +11,8 @@
 
 	var defaults = {
 		useNativeMenu: false,
-		attributes: {}
+		attributes: {},
+		showCounts: true
 	},
 	buildMenu = function($el, options) {
 		// build out the select menu
@@ -31,7 +32,7 @@
 							})
 						);
 		// insert it
-		$el.prepend( $select ).trigger('create');
+		$el.prepend( $select ).trigger('create').listview('refresh');
 	},
 	compileKeys = function($el, options) {
 		var $list = $('li:not(.jqmts)',$el);
@@ -76,7 +77,7 @@
 		init: function(options) {
 			this.jqmData("jqmts", $.extend({}, defaults, options));
 			buildMenu(this,this.jqmData("jqmts"));
-			compileKeys(this,this.jqmData("jqmts"));
+			if (options.showCounts) compileKeys(this,this.jqmData("jqmts"));
 			return this;
 		},
 		// Allow dynamic update of source and link

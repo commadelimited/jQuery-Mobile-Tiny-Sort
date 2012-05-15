@@ -2,38 +2,42 @@
 
 A jQuery Mobile implemention of TinySort
 
-## Getting Started
-Download the [production version][min] or the [development version][max].
+## Example
+View a simple [demo of jQuery Mobile Tiny Sort](http://andymatthews.net/code/jqmts/)
 
-[min]: https://raw.github.com/commadelimited/jquery.jqmts/master/dist/jquery.jqmts.min.js
-[max]: https://raw.github.com/commadelimited/jquery.jqmts/master/dist/jquery.jqmts.js
+## Quick start
 
-In your web page:
+Clone the git repo - `git clone git@github.com:commadelimited/jquery.jqmts.js.git` - or [download it](https://github.com/commadelimited/jquery.jqmts.js/zipball/master)
 
-```html
-<script src="jquery.js"></script>
-<script src="dist/jquery.jqmts.min.js"></script>
-<script>
-jQuery(function($) {
-  $.awesome(); // "awesome"
-});
-</script>
-```
+## Usage & Documentation
 
-## Documentation
-_(Coming soon)_
+jQuery Mobile Tiny Sort uses data attributes to sort data in your listviews. Every list item should have the same set of attributes, but the value can be whatever you choose. In the initialization code you provide a list of attributes along with their human readable name. The example uses firstname ("First Name"), and lastname ("Last Name"). The setup for firstname/lastname sorting would look like this.
 
-## Examples
-_(Coming soon)_
+	$('#sortlist').jqmts({
+		useNativeMenu: false, // use standard select menu, or enhanced
+		showCounts: true, // shows a count of unique listview values or not
+		attributes: {firstname: 'First Name', lastname: 'Last Name'}
+	});
+
+	<ul data-role="listview" id="sortlist">
+		<li data-sort-firstname="alana" data-sort-lastname="Midgley">Alana Midgley</li>
+		<li data-sort-firstname="lonnie" data-sort-lastname="Wuest">Jaime Wuest</li>
+	</ul>
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
-_Also, please don't edit files in the "dist" subdirectory as they are generated via grunt. You'll find source code in the "src" subdirectory!_
+You are invited to contribute code and suggestions to this project. The more the merrier.
 
-## Release History
-_(Nothing yet)_
+## Project Info
 
-## License
-Copyright (c) 2012 andy matthews  
-Licensed under the MIT license.
+* Source: https://github.com/commadelimited/jquery.jqmts.js
+* Twitter: [http://twitter.com/commadelimited](http://twitter.com/commadelimited)
+
+### 3rd party libraries required:
+
+* jQuery: MIT/GPL license
+* jQuery Mobile: MIT/GPL license
+
+### Custom bits:
+
+Public domain

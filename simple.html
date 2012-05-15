@@ -35,7 +35,7 @@
 					</select>
 				</li>
 				-->
-				<ul data-role="listview" data-inset="true" data-sortlist="true" id="sortlist">
+				<ul data-role="listview" data-inset="true" id="sortlist">
 					<li data-sort-firstname="alana" data-sort-lastname="Midgley">Alana Midgley</li>
 					<li data-sort-firstname="lonnie" data-sort-lastname="Wuest">Jaime Wuest</li>
 					<li data-sort-firstname="tania" data-sort-lastname="Maheu">Tania Maheu</li>
@@ -57,6 +57,7 @@
 			$(function(){
 				$('#sortlist').jqmts({
 					useNativeMenu: false,
+					showCounts: true,
 					attributes: {firstname: 'First Name', lastname: 'Last Name'}
 				});
 			});
