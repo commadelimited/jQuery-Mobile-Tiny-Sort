@@ -16,6 +16,7 @@ jQuery Mobile Tiny Sort uses data attributes to sort data in your listviews. Eve
 	$('#sortlist').jqmts({
 		useNativeMenu: false, // use standard select menu, or enhanced
 		showCounts: true, // shows a count of unique listview values or not
+		className: 'jqmts', // allows the addition of an optional classname
 		attributes: {firstname: 'First Name', lastname: 'Last Name'}
 	});
 

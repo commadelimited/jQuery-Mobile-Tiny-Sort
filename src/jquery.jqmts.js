@@ -1,7 +1,8 @@
 /*
  * jquery.jqmts
  * https://github.com/commadelimited/jquery.jqmts.js
- *
+ * Version: 0.5
+ * 
  * Copyright (c) 2012 andy matthews
  * Licensed under the MIT license.
  * Packed with: http://jsutility.pjoneil.net/
@@ -13,11 +14,12 @@
 	var defaults = {
 		useNativeMenu: false,
 		attributes: {},
-		showCounts: true
+		showCounts: true,
+		className: 'jqmts'
 	},
 	buildMenu = function($el, options) {
 		// build out the select menu
-		var $select = $('<li></li>').addClass('jqmts')
+		var $select = $('<li></li>').addClass(options.className)
 						.prepend(
 							$('<select></select>')
 							.attr(
@@ -31,14 +33,14 @@
 								}
 								return str.join('');
 							}).on('change', function(e){
-								$('li:not(.jqmts)',$el).tsort({data: 'sort-' + e.currentTarget.value});
+								$('li:not(.' + options.className + ')',$el).tsort({data: 'sort-' + e.currentTarget.value});
 							})
 						);
 		// insert it
 		$el.prepend( $select ).trigger('create').listview('refresh');
 	},
 	compileKeys = function($el, options) {
-		var $list = $('li:not(.jqmts)',$el);
+		var $list = $('li:not(.' + options.className + ')',$el);
 		var $dropdown = $('#' + $el.attr('id') + '-sort');
 		var scope = window;
 
@@ -87,17 +89,6 @@
 			buildMenu(this,this.jqmData("jqmts"));
 			if (options.showCounts) compileKeys(this,this.jqmData("jqmts"));
 			return this;
-		},
-		// Allow dynamic update of source and link
-		update: function(options) {
-			/*
-			var settings = this.jqmData("jqmts");
-			if (settings) {
-				this.jqmData("jqmts", $.extend(settings, options));
-			}
-			return this;
-			*/
-			// console.log('update method called');
 		}
 	};
 
