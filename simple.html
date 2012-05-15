@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>jQuery Mobile Tiny Sort</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script src="src/jquery.tinysort.min.js"></script>
+		<script src="src/jquery.jqmts.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header" data-position="inline">
+				<h1>jQuery Mobile Tiny Sort</h1>
+				<div data-role="navbar">
+					<ul>
+						<a href="index.html" data-ajax="false">Home</a>
+						<a href="simple.html" class="ui-btn-active" data-ajax="false">Simple</a>
+						<a href="pretty.html" data-ajax="false">Pretty</a>
+						<a href="long.html" data-ajax="false">Long</a>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content">
+
+				<a href="https://github.com/commadelimited/jquery.jqmts.js" data-role="button" data-icon="star">Get the code</a>
+
+				<h2>Simple Lists</h2>
+
+				<ul data-role="listview" data-inset="true" id="sortlist">
+					<li data-sort-firstname="alana" data-sort-lastname="Midgley">Alana Midgley</li>
+					<li data-sort-firstname="lonnie" data-sort-lastname="Wuest">Jaime Wuest</li>
+					<li data-sort-firstname="tania" data-sort-lastname="Maheu">Tania Maheu</li>
+					<li data-sort-firstname="benita" data-sort-lastname="Staudt">Benita Staudt</li>
+					<li data-sort-firstname="jaime" data-sort-lastname="Peat">Jaime Peat</li>
+					<li data-sort-firstname="clare" data-sort-lastname="Sellman">Clare Sellman</li>
+					<li data-sort-firstname="max" data-sort-lastname="Yuan">Max Yuan</li>
+					<li data-sort-firstname="andy" data-sort-lastname="Matthews">Andy Matthews</li>
+					<li data-sort-firstname="sofia" data-sort-lastname="Bernett">Sofia Bernett</li>
+					<li data-sort-firstname="lilia" data-sort-lastname="Sultan">Lilia Sultan</li>
+					<li data-sort-firstname="jaime" data-sort-lastname="matthews">Jaime Matthews</li>
+					<li data-sort-firstname="evan" data-sort-lastname="matthews">Evan Matthews</li>
+				</ul>
+
+			</div>
+		</div>
+	
+		<script>
+			$(function(){
+				$('#sortlist').jqmts({
+					useNativeMenu: true,
+					showCounts: true,
+					attributes: {firstname: 'First Name', lastname: 'Last Name'}
+				});
+			});
+		</script>
+
+	</body>
+</html>
