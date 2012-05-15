@@ -65,7 +65,6 @@
 			for(var s in window.sortKeys) {
 				var prep = s.toLowerCase().replace('sort','');
 				$('option[value=' + prep + ']',$dropdown).text(function(i,old){
-					console.log(' (' + Object.keys(window[s]).length + ')');
 					var value = $(this).val();
 					return old + ' (' + Object.keys(window[s]).length + ')';
 				});
@@ -75,6 +74,11 @@
 	},
 	methods = {
 		init: function(options) {
+			// enforce hard dependancy on TinySort
+			if (typeof window.jQuery.tinysort != 'object') {
+				alert('TinySort is not defined.\nhttp://tinysort.sjeiti.com/')
+				return;
+			}
 			this.jqmData("jqmts", $.extend({}, defaults, options));
 			buildMenu(this,this.jqmData("jqmts"));
 			if (options.showCounts) compileKeys(this,this.jqmData("jqmts"));
