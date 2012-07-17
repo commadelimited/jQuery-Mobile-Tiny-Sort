@@ -3,7 +3,7 @@
 A jQuery Mobile implemention of TinySort
 
 ## Example
-View a simple [demo of jQuery Mobile Tiny Sort](andymatthews.net/code/jqm-tinysort/)
+View a simple [demo of jQuery Mobile Tiny Sort](http://andymatthews.net/code/jqm-tinysort/)
 
 ## Quick start
 
