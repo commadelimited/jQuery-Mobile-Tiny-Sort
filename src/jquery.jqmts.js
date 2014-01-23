@@ -22,10 +22,14 @@
 		var $select = $('<li></li>').addClass(options.className)
 						.prepend(
 							$('<select></select>')
+							// .data('native-menu',options.useNativeMenu)
 							.attr(
-								{'id': $el.attr('id') + '-sort'}
+								{
+									'id': $el.attr('id') + '-sort',
+									'name': $el.attr('id') + '-sort',
+									'data-native-menu': options.useNativeMenu
+								}
 							)
-							.data('native-menu',options.useNativeMenu)
 							.html(function(){
 								var str = [];
 								for (var o in options.attributes) {
