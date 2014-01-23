@@ -7,7 +7,7 @@ View a simple [demo of jQuery Mobile Tiny Sort](http://andymatthews.net/code/jqm
 
 ## Quick start
 
-Clone the git repo - `git clone git@github.com:commadelimited/jquery.jqmts.js.git` - or [download it](https://github.com/commadelimited/jquery.jqmts.js/zipball/master)
+Clone the git repo - `git clone git@github.com:commadelimited/jQuery-Mobile-Tiny-Sort.git` - or [download it](https://github.com/commadelimited/jQuery-Mobile-Tiny-Sort/zipball/master)
 
 ## Usage & Documentation
 
@@ -31,7 +31,7 @@ You are invited to contribute code and suggestions to this project. The more the
 
 ## Project Info
 
-* Source: https://github.com/commadelimited/jquery.jqmts.js
+* Source: https://github.com/commadelimited/jQuery-Mobile-Tiny-Sort
 * Twitter: [http://twitter.com/commadelimited](http://twitter.com/commadelimited)
 
 ### 3rd party libraries required:

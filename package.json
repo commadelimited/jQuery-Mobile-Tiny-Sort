@@ -1,29 +1,36 @@
 {
-  "name": "jquery.jqmts",
-  "title": "jQuery Mobile Tiny Sort",
+  "name": "jQuery-Mobile-Tiny-Sort",
+  "version": "0.2.0",
   "description": "A jQuery Mobile implemention of TinySort",
-  "version": "0.1.0",
-  "homepage": "https://github.com/commadelimited/jquery.jqmts.js",
-  "author": {
-    "name": "andy matthews",
-    "email": "andy@commadelimited.com",
-    "url": "http://andyMatthews.net"
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/commadelimited/jquery.jqmts.js.git"
+    "url": "git@github.com:commadelimited/jQuery-Mobile-Tiny-Sort.git"
   },
-  "bugs": {
-    "url": "https://github.com/commadelimited/jquery.jqmts.js/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/commadelimited/jquery.jqmts.js/blob/master/LICENSE-MIT"
-    }
+  "keywords": [
+    "jquery",
+    "mobile",
+    "tiny",
+    "sort"
   ],
-  "dependencies": {
-    "jquery": "1.8.2"
+  "author": "Andy Matthews",
+  "license": "MIT, GPL",
+  "bugs": {
+    "url": "https://github.com/commadelimited/jQuery-Mobile-Tiny-Sort/issues"
   },
-  "keywords": []
+  "homepage": "https://github.com/commadelimited/jQuery-Mobile-Tiny-Sort",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "qunit": "~0.5.18",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.1",
+    "grunt-contrib-qunit": "~0.4.0",
+    "grunt-contrib-concat": "~0.3.0"
+  }
 }

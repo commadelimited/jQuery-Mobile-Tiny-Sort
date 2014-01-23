@@ -1,9 +1,9 @@
 /*
  * jquery.jqmts
- * https://github.com/commadelimited/jquery.jqmts.js
+ * https://github.com/commadelimited/jQuery-Mobile-Tiny-Sort
  * Version: 0.5
- * 
- * Copyright (c) 2012 andy matthews
+ *
+ * Copyright (c) 2014 andy matthews
  * Licensed under the MIT license.
  * Packed with: http://jsutility.pjoneil.net/
  */
@@ -68,12 +68,13 @@
 
 		// if there are no stream items then sortKeys is undefined
 		if (typeof scope.sortKeys != "undefined") {
-			for(var s in scope.sortKeys) {
-				var prep = s.toLowerCase().replace('sort','');
-				$('option[value=' + prep + ']',$dropdown).text(function(i,old){
+			var addHeader = function(i,old){
 					var value = $(this).val();
 					return old + ' (' + Object.keys(scope[s]).length + ')';
-				});
+				};
+			for(var s in scope.sortKeys) {
+				var prep = s.toLowerCase().replace('sort','');
+				$('option[value=' + prep + ']',$dropdown).text(addHeader);
 			}
 			$dropdown.selectmenu('refresh');
 		}
