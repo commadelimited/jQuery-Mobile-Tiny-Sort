@@ -1,5 +1,6 @@
 {
   "name": "jQuery-Mobile-Tiny-Sort",
+  "filename": "jquery.jqmts",
   "version": "0.2.0",
   "description": "A jQuery Mobile implemention of TinySort",
   "main": "index.js",
@@ -13,12 +14,6 @@
     "type": "git",
     "url": "git@github.com:commadelimited/jQuery-Mobile-Tiny-Sort.git"
   },
-  "keywords": [
-    "jquery",
-    "mobile",
-    "tiny",
-    "sort"
-  ],
   "author": "Andy Matthews",
   "license": "MIT, GPL",
   "bugs": {

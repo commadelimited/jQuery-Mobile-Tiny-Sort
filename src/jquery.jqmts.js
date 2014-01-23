@@ -90,6 +90,10 @@
 			buildMenu(this,this.jqmData("jqmts"));
 			if (options.showCounts) compileKeys(this,this.jqmData("jqmts"));
 			return this;
+		},
+		destroy: function(){
+			// remove header row
+			$(this).find('.' + defaults.className).remove();
 		}
 	};
 
