@@ -3,36 +3,59 @@
 /*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
 (function($) {
 
-  module('jQuery#awesome', {
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
+    module('jQueryMobileTinySort', {
+        setup: function() {
+            // pass
+        },
+        teardown: function() {
+            $('#sortlist').jqmts('destroy');
+        }
+    });
 
-  test('is chainable', 1, function() {
-    // Not a bad test to run on collection methods.
-    strictEqual(this.elems.awesome(), this.elems, 'should be chaninable');
-  });
+    test('is chainable', function() {
+        // test create the thing
+        ok($('#sortlist').jqmts({
+            useNativeMenu: true,
+            showCounts: true,
+            attributes: {firstname: 'First Name', lastname: 'Last Name'}
+        }).addClass('mySortList'), 'can be chained');
+        equal($('#sortlist').hasClass('mySortList'), true, 'class was added correctly from chaining');
+    });
 
-  test('is awesome', 1, function() {
-    strictEqual(this.elems.awesome().text(), 'awesomeawesomeawesome', 'should be thoroughly awesome');
-  });
+    test('header is added', function() {
+        // create the thing
+        $('#sortlist').jqmts({
+            useNativeMenu: true,
+            showCounts: true,
+            attributes: {firstname: 'First Name', lastname: 'Last Name'}
+        });
 
-  module('jQuery.awesome');
+        equal($('#sortlist').find('.jqmts').length, 1, 'header row is present');
+    });
 
-  test('is awesome', 1, function() {
-    strictEqual($.awesome(), 'awesome', 'should be thoroughly awesome');
-  });
+    test('initial sort order is maintained', function() {
+        // create the thing
+        $('#sortlist').jqmts({
+            useNativeMenu: true,
+            showCounts: true,
+            attributes: {firstname: 'First Name', lastname: 'Last Name'}
+        });
 
-  module(':awesome selector', {
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
+        // first li, that is not 'jqmts' is "Alana Midgley"
+        equal( $('#sortlist').find('li').not(".jqmts").get(0).innerHTML, "Alana Midgley", 'initial sort order is maintained');
+    });
 
-  test('is awesome', 1, function() {
-    // Use deepEqual & .get() when comparing jQuery objects.
-    deepEqual(this.elems.filter(':awesome').get(), this.elems.last().get(), 'knows awesome when it sees it');
-  });
+    test('updated sort order lists correct value first', function() {
+        // create the thing
+        $('#sortlist').jqmts({
+            useNativeMenu: true,
+            showCounts: true,
+            attributes: {firstname: 'First Name', lastname: 'Last Name'}
+        });
+
+        // change the value, and the sort order
+        $('#sortlist-sort').val('lastname').trigger('change');
+        equal( $('#sortlist').find('li').not(".jqmts").get(0).innerHTML, "Sofia Bernett", "updated sort order lists correct value first");
+    });
 
 }(jQuery));
