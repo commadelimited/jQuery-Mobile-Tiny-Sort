@@ -9,6 +9,7 @@
         },
         teardown: function() {
             $('#sortlist').jqmts('destroy');
+            $('#sortlist_alt').jqmts('destroy');
         }
     });
 
@@ -27,6 +28,7 @@
         $('#sortlist').jqmts({
             useNativeMenu: true,
             showCounts: true,
+            className: 'jqmts',
             attributes: {firstname: 'First Name', lastname: 'Last Name'}
         });
 
@@ -56,6 +58,19 @@
         // change the value, and the sort order
         $('#sortlist-sort').val('lastname').trigger('change');
         equal( $('#sortlist').find('li').not(".jqmts").get(0).innerHTML, "Sofia Bernett", "updated sort order lists correct value first");
+    });
+
+    test('select options have the correct count', function() {
+        // create the thing
+        $('#sortlist_alt').jqmts({
+            useNativeMenu: false,
+            showCounts: true,
+            attributes: {product: 'Sort by SKU Name', price: 'Sort by Price'}
+        });
+
+        // change the value, and the sort order
+        equal( $('#sortlist_alt-sort option:first-child').text(), "Sort by SKU Name (5)", "SKU field should equal 5");
+        equal( $('#sortlist_alt-sort option:last-child').text(), "Sort by Price (5)", "Price field should equal 5");
     });
 
 }(jQuery));

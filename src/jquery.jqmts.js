@@ -1,11 +1,10 @@
 /*
  * jquery.jqmts
  * https://github.com/commadelimited/jQuery-Mobile-Tiny-Sort
- * Version: 0.5
+ * Version: 0.5.1
  *
  * Copyright (c) 2014 andy matthews
  * Licensed under the MIT license.
- * Packed with: http://jsutility.pjoneil.net/
  */
 (function($, window) {
 
@@ -52,20 +51,21 @@
 		$list.each(function(i,el){
 			var $li = $(this);
 			for (var d in $li.data()) {
+
+				// make sure that the sortKeys variable exists
+				if (typeof scope.sortKeys == "undefined") scope.sortKeys = {};
+
 				// we only want items prepended with "sort"
 				if (d.indexOf('sort') >= 0) {
 					// make sure the item doesn't already exist
 					if (!scope[d]) {
 						// if it doesn't, then create it
 						scope[d] = {};
-						// make sure that the sortKeys variable exists
-						if (typeof scope.sortKeys == "undefined") scope.sortKeys = {};
 						// then populate it
 						scope.sortKeys[d] = d;
-					} else {
-						// if it does then populate it
-						scope[d][$li.data(d)] = $li.data(d);
 					}
+					// then populate it
+					scope[d][$li.data(d)] = $li.data(d);
 				}
 			}
 		});
